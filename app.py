@@ -61,15 +61,13 @@ def search_books():
 def home():
     return render_template('index.html')
 
-# Additional routes for movies and books
+# Routes for movies and books
 @app.route('/movies')
 def movies():
-    # Logic for movie suggestions
     return render_template('movies.html')
 
 @app.route('/books')
 def books():
-    # Logic for book suggestions
     return render_template('books.html')
 
 
