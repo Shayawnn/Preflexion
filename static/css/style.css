@@ -1,0 +1,232 @@
+/* Add Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+/* General Styles */
+body, html {
+    font-family: 'Open Sans', sans-serif;
+    color: #4a4a4a;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Hero Section */
+.hero-section h1 {
+    font-size: 4rem;
+    text-shadow: 2px 2px 4px #000;
+    animation: fadeIn 2s;
+}
+
+.hero-section p {
+    font-size: 1.7rem;
+    text-shadow: 1px 1px 3px #000;
+}
+
+.hero-section {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/background-2.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh; /* Viewport Height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    top: 0;
+    inset-inline-end: 0;
+    z-index: -1;
+    text-shadow: 1px 1px 8px rgba(0,0,0,0.7);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Buttons */
+.buttons .btn {
+    margin: 0 10px;
+    padding: 12px 35px;
+    font-size: 1.3rem;
+    transition: background-color 0.3s, transform 0.3s;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+}
+
+.buttons .btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.page-container {
+    padding: 50px;
+    text-align: center;
+}
+
+.buttons .btn-custom-primary {
+    background-color: #fff; /* or any other color */
+    color: #000; /* text color */
+}
+
+.buttons .btn-custom-secondary {
+    background-color: #000; /* or any other color */
+    color: #fff; /* text color */
+}
+
+.tagline {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: #fff;
+}
+
+/* Search Box */
+.search-box input {
+    width: 70%; /* Increase width */
+    padding: 15px; /* Larger padding for better focus */
+    border: 2px solid #007bff;
+    font-size: 1.4rem; /* Larger font size */
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+    border-radius: 25px; /* Rounded corners */
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1); /* Subtle shadow */
+}
+
+.search-box input:focus {
+    border-color: #0056b3;
+    box-shadow: 0px 6px 12px rgba(0,0,0,0.15);
+    outline: none;
+    transform: scale(1.03);
+}
+
+.search-box {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.search-box button {
+    padding: 21px 25px; /* Larger padding for matching height with search box */
+    font-size: 1.2rem; /* Larger font size for visibility */
+    background-color: #007bff; /* Primary button color */
+    color: white; /* Text color */
+    border: 2px solid #007bff; /* Border to match search box */
+    border-radius: 25px; /* Rounded corners to match search box */
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effect */
+    cursor: pointer; /* Cursor change to indicate button */
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1); /* Consistent shadow with search box */
+    margin-left: 10px; /* Spacing between search box and button */
+}
+
+.search-box button:hover {
+    background-color: #0056b3; /* Darker color on hover */
+    border-color: #0056b3; /* Border color change on hover */
+    box-shadow: 0px 6px 12px rgba(0,0,0,0.15); /* Slightly larger shadow on hover */
+    transform: scale(1.03); /* Slight zoom effect on hover */
+}
+
+h1, h2, p {
+    font-weight: 400; /* Adjust font weight */
+    color: #333; /* Darker color for better readability */
+    line-height: 1.5; /* Better line spacing */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 3rem;
+    }
+
+    .hero-section p {
+        font-size: 1.4rem;
+    }
+
+    .search-box input {
+        width: 90%;
+    }
+    .search-box button {
+        padding: 12px 20px;
+        font-size: 1.1rem;
+    }
+    .search-examples {
+        padding: 15px;
+    }
+}
+
+/* Results and Examples */
+#movie-results, #book-results {
+    display: none; /* Hide by default */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent dark background */
+    color: #ffffff; /* Light text color for contrast */
+    padding: 20px; /* Comfortable padding */
+    border-radius: 8px; /* Smooth rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+    margin-top: 30px; /* Adequate spacing from other elements */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+#movie-results p, #book-results p {
+    font-size: 1.1rem; /* Clear font size */
+    line-height: 1.6; /* Adequate line spacing for readability */
+    margin-bottom: 10px; /* Space between result items */
+}
+
+#movie-results p:hover, #book-results p:hover {
+    color: #dcdcdc; /* Lighter color on hover for interactivity */
+    text-decoration: none; /* No underline to maintain a clean look */
+    cursor: pointer; /* Change cursor to indicate clickable */
+}
+
+.search-examples {
+    padding: 20px; /* More padding for spacing */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin-top: 30px; /* Extra margin for separation */
+    transition: all 0.3s ease; /* Transition for hover effect */
+}
+
+.search-examples p {
+    color: #007bff; /* More vibrant text color */
+    font-size: 1.1rem; /* Slightly larger font size */
+    font-weight: 500; /* Medium font weight for emphasis */
+    line-height: 1.6; /* Improved line spacing */
+}
+
+.search-examples p:hover {
+    color: #0056b3; /* Darker color on hover for interactivity */
+}
+
+.video-background video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    filter: brightness(50%);
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+    z-index: 1;
+}
+
+.page-container {
+    position: relative;
+    z-index: 2; /* Ensure the text appears above the video and overlay */
+    /* Rest of your styles */
+}
+
+.video-background {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}

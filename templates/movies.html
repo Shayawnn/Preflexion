@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="video-background">
+    <video autoplay loop muted playsinline>
+        <source src="../static/img/movie.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="video-overlay"></div>
+        <div class="page-container">
+        <h2>Tell us what you're looking for in a movie...</h2>
+        <div class="search-box">
+            <input type="text" id="movie-query" placeholder="Search movies..." required>
+            <button onclick="searchMovies()" class="btn btn-primary ml-5">🔍 Search</button>
+        </div>
+        <div class="search-examples">
+            <p>Examples:</p>
+            <p>"... feel-good romantic comedies set in European cities"</p>
+            <p>"... movies similar to 'Inception' with mind-bending plots and stunning visuals"</p>
+            <p>"Recommend a sci-fi movie with strong female leads and futuristic cities."</p>
+            <p>"Looking for a feel-good movie set in the countryside, preferably a romantic comedy."</p>
+        </div>
+        <div id="movie-results"></div>
+        </div>
+    </div>
+    <script>
+    function searchMovies() {
+        var query = document.getElementById('movie-query').value;
+        document.getElementById('movie-results').innerHTML = '<p>Loading...</p>'; // Loading indicator
+        fetch('/search_movies', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ query: query })
+        })
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('movie-results').innerText = data.response;
+            document.getElementById('movie-results').style.display = 'block'; // Show on response
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+    }
+    </script>
+{% endblock %}

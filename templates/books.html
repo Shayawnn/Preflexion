@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="video-background">
+    <video autoplay loop muted playsinline>
+        <source src="../static/img/book.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="video-overlay"></div>
+        <div class="page-container">
+        <h2>Tell us what you're looking for in a book...</h2>
+        <div class="search-box">
+            <input type="text" id="book-query" placeholder="Search for books by genre, author, or theme..." required>
+            <button onclick="searchBooks()" class="btn btn-primary ml-5">🔍 Search</button>
+        </div>
+        <div class="search-examples">
+            <p>Examples:</p>
+            <p>"... books with intricate political plots like 'Game of Thrones'"</p>
+            <p>"... inspirational biographies of influential figures in technology"</p>
+            <p>"Find me a thriller that's similar to 'Gone Girl' but set in Victorian England."</p>
+            <p>"I'm looking for a non-fiction book that explores ancient Egyptian mythology."</p>
+        </div>
+        <div id="book-results"></div>
+        </div>
+    </div>
+    <script>
+    function searchBooks() {
+        var query = document.getElementById('book-query').value;
+        document.getElementById('book-results').innerHTML = '<p>Loading...</p>'; // Loading indicator
+        fetch('/search_books', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ query: query })
+        })
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('book-results').innerText = data.response;
+            document.getElementById('book-results').style.display = 'block'; // Show on response
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+    }
+    </script>
+{% endblock %}
