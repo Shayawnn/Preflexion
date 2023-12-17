@@ -63,13 +63,13 @@ html {
 }
 
 .buttons .btn-custom-primary {
-    background-color: #fff; /* or any other color */
-    color: #000; /* text color */
+    background-color: #fff;
+    color: #000;
 }
 
 .buttons .btn-custom-secondary {
-    background-color: #000; /* or any other color */
-    color: #fff; /* text color */
+    background-color: #000;
+    color: #fff;
 }
 
 .tagline {
@@ -81,13 +81,13 @@ html {
 
 /* Search Box */
 .search-box input {
-    width: 70%; /* Increase width */
-    padding: 15px; /* Larger padding for better focus */
+    width: 70%;
+    padding: 15px;
     border: 2px solid #007bff;
-    font-size: 1.4rem; /* Larger font size */
-    transition: all 0.3s ease-in-out; /* Smooth transition */
-    border-radius: 25px; /* Rounded corners */
-    box-shadow: 0px 4px 8px rgba(0,0,0,0.1); /* Subtle shadow */
+    font-size: 1.4rem;
+    transition: all 0.3s ease-in-out;
+    border-radius: 25px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
 }
 
 .search-box input:focus {
@@ -103,29 +103,29 @@ html {
 }
 
 .search-box button {
-    padding: 21px 25px; /* Larger padding for matching height with search box */
-    font-size: 1.2rem; /* Larger font size for visibility */
+    padding: 21px 25px;
+    font-size: 1.2rem;
     background-color: #007bff; /* Primary button color */
     color: white; /* Text color */
-    border: 2px solid #007bff; /* Border to match search box */
-    border-radius: 25px; /* Rounded corners to match search box */
-    transition: all 0.3s ease-in-out; /* Smooth transition for hover effect */
+    border: 2px solid #007bff;
+    border-radius: 25px;
+    transition: all 0.3s ease-in-out;
     cursor: pointer; /* Cursor change to indicate button */
     box-shadow: 0px 4px 8px rgba(0,0,0,0.1); /* Consistent shadow with search box */
     margin-left: 10px; /* Spacing between search box and button */
 }
 
 .search-box button:hover {
-    background-color: #0056b3; /* Darker color on hover */
-    border-color: #0056b3; /* Border color change on hover */
-    box-shadow: 0px 6px 12px rgba(0,0,0,0.15); /* Slightly larger shadow on hover */
+    background-color: #0056b3;
+    border-color: #0056b3;
+    box-shadow: 0px 6px 12px rgba(0,0,0,0.15);
     transform: scale(1.03); /* Slight zoom effect on hover */
 }
 
 h1, h2, p {
-    font-weight: 400; /* Adjust font weight */
-    color: #333; /* Darker color for better readability */
-    line-height: 1.5; /* Better line spacing */
+    font-weight: 400;
+    color: #333;
+    line-height: 1.5;
 }
 
 /* Responsive Design */
@@ -153,17 +153,17 @@ h1, h2, p {
 /* Results and Examples */
 #movie-results, #book-results {
     display: none; /* Hide by default */
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent dark background */
-    color: #ffffff; /* Light text color for contrast */
-    padding: 20px; /* Comfortable padding */
-    border-radius: 8px; /* Smooth rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
-    margin-top: 30px; /* Adequate spacing from other elements */
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    margin-top: 30px;
     transition: all 0.3s ease; /* Smooth transition for hover effects */
 }
 
 #movie-results p, #book-results p {
-    font-size: 1.1rem; /* Clear font size */
+    font-size: 1.1rem;
     line-height: 1.6; /* Adequate line spacing for readability */
     margin-bottom: 10px; /* Space between result items */
 }
@@ -175,22 +175,22 @@ h1, h2, p {
 }
 
 .search-examples {
-    padding: 20px; /* More padding for spacing */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    margin-top: 30px; /* Extra margin for separation */
-    transition: all 0.3s ease; /* Transition for hover effect */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    transition: all 0.3s ease;
 }
 
 .search-examples p {
-    color: #007bff; /* More vibrant text color */
-    font-size: 1.1rem; /* Slightly larger font size */
-    font-weight: 500; /* Medium font weight for emphasis */
-    line-height: 1.6; /* Improved line spacing */
+    color: #007bff;
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.6;
 }
 
 .search-examples p:hover {
-    color: #0056b3; /* Darker color on hover for interactivity */
+    color: #0056b3;
 }
 
 .video-background video {
@@ -215,14 +215,13 @@ h1, h2, p {
     left: 0;
     bottom: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+    background: rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
 
 .page-container {
     position: relative;
     z-index: 2; /* Ensure the text appears above the video and overlay */
-    /* Rest of your styles */
 }
 
 .video-background {
